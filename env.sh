@@ -1,0 +1,1 @@
+export CLASSPATH=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.161-0.b14.el7_4.x86_64/lib/tools.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.161-0.b14.el7_4.x86_64/jre/lib/rt.jar:/media/sf_Public/tomcat/WEB-INF/lib/mysql-connector-java.jar:/media/sf_Public/tomcat/WEB-INF/lib/tomcat-servlet-api-7.0.6.jar

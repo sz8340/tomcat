@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+  version="3.1"
+  metadata-complete="true">
+
+    <description> Servlet and JSP Examples.  </description>
+    <display-name>Servlet and JSP Examples</display-name>
+
+    <servlet>
+        <servlet-name>InventoryFilter</servlet-name>
+        <servlet-class>InventoryFilter</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InventoryFilter</servlet-name>
+        <url-pattern>/InventoryFilter</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InventoryList</servlet-name>
+        <servlet-class>InventoryList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InventoryList</servlet-name>
+        <url-pattern>/InventoryList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InventoryAdd</servlet-name>
+        <servlet-class>InventoryAdd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InventoryAdd</servlet-name>
+        <url-pattern>/InventoryAdd</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InventoryAddList</servlet-name>
+        <servlet-class>InventoryAddList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InventoryAddList</servlet-name>
+        <url-pattern>/InventoryAddList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Applications</servlet-name>
+        <servlet-class>Applications</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Applications</servlet-name>
+        <url-pattern>/Applications</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Title</servlet-name>
+        <servlet-class>Title</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Title</servlet-name>
+        <url-pattern>/Title</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ExecuteCmd</servlet-name>
+        <servlet-class>ExecuteCmd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExecuteCmd</servlet-name>
+        <url-pattern>/ExecuteCmd</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ImagesFilter</servlet-name>
+        <servlet-class>ImagesFilter</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ImagesFilter</servlet-name>
+        <url-pattern>/ImagesFilter</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Images</servlet-name>
+        <servlet-class>Images</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Images</servlet-name>
+        <url-pattern>/Images</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Resources</servlet-name>
+        <servlet-class>Resources</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Resources</servlet-name>
+        <url-pattern>/Resources</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Upload</servlet-name>
+        <servlet-class>Upload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Upload</servlet-name>
+        <url-pattern>/Upload</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Command</servlet-name>
+        <servlet-class>Command</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Command</servlet-name>
+        <url-pattern>/Command</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Push</servlet-name>
+        <servlet-class>Push</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Push</servlet-name>
+        <url-pattern>/Push</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>

@@ -1,0 +1,28 @@
+<?xml version="1.0" ?> 
+<project name="FDA-Docker" default="war">
+
+	
+	<target name="init">
+		<mkdir dir="build/classes"/>
+		<mkdir dir="dist" />
+	</target>
+	
+	<target name="compile" depends="init" >
+		<javac includeantruntime="true" destdir="build/classes" debug="true" srcdir="src">
+		</javac>
+	</target>
+	
+	<target name="war" depends="compile">
+		<war destfile="dist/fda.war" webxml="WEB-INF/web.xml">
+			<fileset dir="jsp"/>
+			<lib dir="WEB-INF/lib"/>
+			<classes dir="build/classes"/>
+		</war>
+	</target>
+	
+	<target name="clean">
+		<delete dir="dist" />
+		<delete dir="build" />
+	</target>
+	
+</project>

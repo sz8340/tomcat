@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+  tomcat1:
+    image: 10.10.1.11/fda/tomcat:8.5.24
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - 8084:8080
+  mysql1:
+    image: 10.10.1.11/fda/mysql:5.7
+    deploy:
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+#networks:
+#  overlay2:
+

@@ -1,0 +1,36 @@
+        public void execute(String command) {
+        	String s = "";
+        	String[] oldtag;
+	        try {
+	        	Runtime rt = Runtime.getRuntime();
+		        Process proc = rt.exec(command);
+	
+	        	BufferedReader stdInput = new BufferedReader(new InputStreamReader(proc.getInputStream()));
+	        	BufferedReader stdError = new BufferedReader(new InputStreamReader(proc.getErrorStream()));
+	
+	        	// read the output from the command
+	        	//out.println("Here is the standard output of the command:<br>");
+	        	while ((s = stdInput.readLine()) != null) {
+	            		out.println(s + "<br>");
+				if ( s.contains("Loaded image:") ) {
+					out.println("<br> Tagging image");
+					oldtag = s.split(":", 2);
+					String newtag = repo + "/" + team + "/" + image + ":" + label;
+					String tag = "docker tag " + oldtag[1] + " " + newtag;
+					out.println(tag + "<br>");
+					execute(tag);
+					out.println("<br><br> Pushing image to DTR: " + newtag);
+					String push = "docker push " + newtag;
+					execute(push);
+				}
+	        	}
+	
+	        	// read any errors from the attempted command
+	        	//out.println("Here is the standard error of the command (if any):<br>");
+	        	while ((s = stdError.readLine()) != null) {
+	            		out.println(s + "<br>");
+	        	}
+	        } catch (Exception e) { 
+	            out.println(e);
+	        }
+        }
